@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Information</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;700&display=swap">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <style>
+    </style>
+
+</head>
+
+<body class="backGroundColor solid">
+    <div class="border">
+
+        <h1 class="name" id="name">Messages</h1>
+
+        <div class="button-container">
+            <a href="home.html" class="ButtonDecor" id="Home">Home</a>
+            <a href="pictures.html" class="ButtonDecor" id="Pics">Pictures</a>
+            <a href="messages.html" class="ButtonDecor" id="messages">Messages</a>
+            <a href="index.html" class="ButtonDecor" id="Gift">Gift</a>
+        </div>
+
+        <h4 id="born">August 19, 2024</h4>
+        
+    </div>
+
+    <!-- Family -->
+    <div class="container">
+        <div class="envelope-wrapper">
+            <div class="envelope">
+                <div class="letter">
+                    <div class="text">
+                        <strong>Family.</strong>
+                        <p>
+                            <br><a href="Letter/Marisol_letter.png" alt="Marisolk Letter" target="_blank">Marisol's Letter</a>
+                            <br><a href="Letter/Chelle_letter.png" alt="Chelle Letter" target="_blank">Chelle's Letter</a>
+                            <br><a href="Letter/Father_letter.png" alt="Jeffrey Letter" target="_blank">Jeffrey's Letter</a>
+                            <br><a href="Letter/Kyla_letter.png" alt="Kyla Letter" target="_blank">Kyla's Letter</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="heart"></div>
+        </div>
+    </div>
+
+    <!-- Friend -->
+    <div class="container">
+        <div class="envelope-wrapper">
+            <div class="envelope">
+                <div class="letter">
+                    <div class="text">
+                        <strong>Friends.</strong>
+                        <p>
+                            <a href="Letter/chelsie_letter.png" alt="Chelsie Letter" target="_blank">Chelsie's Letter</a>
+                            <br><a href="Letter/Elyza_letter.png" alt="Elyza Letter" target="_blank">Elyza's Letter</a>
+                            <br><a href="Letter/Mykah_letter.png" alt="Mykah Letter" target="_blank">Mykah's Letter</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="heart"></div>
+        </div>
+    </div>
+
+
+    <!-- Zeus -->
+    <div class="container">
+        <div class="envelope-wrapper">
+            <div class="envelope">
+                <div class="letter">
+                    <div class="text">
+                        <strong>Zeus.</strong>
+                        <p>
+                            <a href="Letter/Zeus_letter.png" alt="Zeus Letter" target="_blank">Zeus's Letter</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="heart"></div>
+        </div>
+    </div>
+    
+    <script>
+        document.querySelectorAll('.envelope-wrapper').forEach(envelope => {
+        envelope.addEventListener('click', () => {
+        envelope.classList.toggle('flap');
+        });
+        });
+    </script>
+
+</body>
+</html>

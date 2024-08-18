@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Information</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;700&display=swap">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <style>
+    </style>
+
+</head>
+
+<body class="backGroundColor solid">
+    <div class="border">
+
+      <div id="balloon-container">
+        <!-- name -->
+        <h1 class="name" id="name">
+            Jemiline Kianna Cabudsan
+        </h1>
+
+        <!-- buttons -->
+        <div class="button-container">
+            <a href="home.html" class="ButtonDecor" id="Home">Home</a>
+            <a href="pictures.html" class="ButtonDecor" id="Pics">Pictures</a>
+            <a href="messages.html" class="ButtonDecor" id="messages">Messages</a>
+            <a href="index.html" class="ButtonDecor" id="Gift">Gift</a>
+        </div>
+
+        <!-- birthday cake -->
+        <div class="birthday-cake">
+            <div class="holder"></div>
+            <div class="shadow"></div>
+            <div class="cake">
+            <div class="chocolate"></div>
+            </div>
+            <div class="candle"></div>
+            <div class="flame"></div>
+        </div>
+
+        <!-- Message -->
+        <div class="parent-container">
+        <div class="Type">
+        <p class="Text" id="Text">
+            <strong>
+              This website is dedicated to celebrating you. It features a collection of pictures and heartfelt messages from your parents, friends, and loved ones. 
+              Here, you can explore moments and read the personal notes that highlight the special connections and memories people have with you. 
+              Enjoy this space crafted just for you and the impact you’ve had on those around you.</strong>
+        </p>
+    </div>
+  </div>
+  </div>
+        <!-- born -->
+        <h4 id="born">August 19, 2024</h4>
+        
+<!-- script -->
+<script>
+const balloonContainer = document.getElementById("balloon-container");
+
+function random(num) {
+  return Math.floor(Math.random() * num);
+}
+
+function getRandomStyles() {
+  var r = random(255);
+  var g = random(255);
+  var b = random(255);
+  var mt = random(200);
+  var ml = random(50);
+  var dur = random(5) + 5;
+  return `
+  background-color: rgba(${r},${g},${b},0.7);
+  color: rgba(${r},${g},${b},0.7); 
+  box-shadow: inset -7px -3px 10px rgba(${r - 10},${g - 10},${b - 10},0.7);
+  margin: ${mt}px 0 0 ${ml}px;
+  animation: float ${dur}s ease-in infinite;
+  pointer-events: none; /* Ensure balloons are not clickable */
+  `;
+}
+
+function createBalloons(num) {
+  for (var i = num; i > 0; i--) {
+    var balloon = document.createElement("div");
+    balloon.className = "balloon";
+    balloon.style.cssText = getRandomStyles();
+    balloonContainer.append(balloon);
+  }
+}
+
+function removeBalloons() {
+  balloonContainer.style.opacity = 0;
+  setTimeout(() => {
+    balloonContainer.remove();
+  }, 500);
+}
+
+window.addEventListener("load", () => {
+  createBalloons(30);
+});
+  
+</script>
+
+    </div>
+
+</body>
+</html>
